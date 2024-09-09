@@ -1,0 +1,19 @@
+{%  extends 'base.html' %}
+
+{% block title %}وظایف روزانه{% endblock %}
+
+{% block content%}
+<div class="container">
+      
+    <div class="list-container-home">
+      <h1 style="color: green;">کار و زندگی خود را سازماندهی کنید</h1>
+    </div>
+    <div class="list-container-home">
+      <p style="font-size: 20px;">
+        با تودو لیست وظایف و اهداف خود را بررسی کنید و با برنامه ریزی زندگی را پیش ببرید
+      </p>
+    </div>
+    <div class="list-container-home">
+      <a href="{% url 'accounts:signup' %}" class="start-link">شروع</a>
+    </div>
+{% endblock %}

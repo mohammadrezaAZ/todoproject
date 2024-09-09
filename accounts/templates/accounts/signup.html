@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}ثبت نام{% endblock %}
+
+{% block content %}
+
+    <div class="container create-form-container">
+        <h1>Signup</h1>
+        <form class="create-todo-form"  method="POST">
+            <div class="input-container">
+                <label for="">{{form.username.label}}</label>
+                <input class="form-control" type="text" name="username" id="id_username" required>
+                <p class="helper-text">نام کاربری</p>
+            </div>
+            <div class="input-container">
+                <label for="">{{form.password1.label}}</label>
+                <input class="form-control" type="password" name="password1" id="id_password1" required>
+                <p class="helper-text">گذرواژه</p>
+            </div>
+            <div class="input-container">
+                <label for="">{{form.password2.label}}</label>
+                <input class="form-control" type="password" name="password2" id="id_password2" required>
+                <p class="helper-text">تکرار گذرواژه</p>
+            </div>
+            <button class="btn btn-primary" type="submit">ثبت نام</button>
+            {% csrf_token %}
+        </form>
+        <p style="color: red;">گذرواژه حداقل باید 8 کاراکتر داشته باشد<p>
+        <p style="color: red;">وجود حداقل یک کاراکتر خاص و اعداد در گذرواژه الزامی است</p>
+    </div>
+{% endblock %}
+
